@@ -1,3 +1,8 @@
+augroup vim_plug_user_config
+    autocmd!
+    autocmd BufWritePost config.vim source <afile> | PlugInstall
+augroup end
+
 " Plugins will be downloaded under the specified directory.
 call plug#begin(has('nvim') ? stdpath('data') . '/plugged' : '~/.vim/plugged')
 
@@ -9,6 +14,7 @@ Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
 " Plug 'ryanoasis/vim-devicons' Icons without colours
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'nvim-tree/nvim-tree.lua'
+Plug 'windwp/nvim-autopairs'
 
 " List ends here. Plugins become visible to Vim after this call.
 call plug#end()

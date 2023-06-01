@@ -10,6 +10,8 @@ opt.smarttab = true
 opt.expandtab = true
 opt.softtabstop = 0
 opt.ls = 2
+opt.ignorecase = true
+opt.smartcase = true
 
 opt.termguicolors = true
 
@@ -23,6 +25,7 @@ opt.termguicolors = true
 vim.cmd 'source ~/.config/nvim/lua/plugins/config.vim'
 require("plugins.bufferline")
 require("plugins.nvim-tree")
+require("plugins.autopairs")
 
 ---- Keymaps ----
 -- Applu coc keymap

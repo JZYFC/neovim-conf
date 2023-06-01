@@ -12,9 +12,9 @@ keymap.set("n", "<space>f", ":NvimTreeToggle<CR>", opts)
 keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)
 keymap.set("n", "<leader>sh", ":split<CR>", opts)
 -- Bufferline
-keymap.set("n", "<space>bc", ":bd<CR>", opts)
-keymap.set("n", "<space>bn", ":BufferLineCycleNext<CR>", opts)
-keymap.set("n", "<space>bp", ":BufferLineCyclePrev<CR>", opts)
+keymap.set("n", "<space>bc", ":bd<CR>:NvimTreeToggle<CR>:NvimTreeToggle<CR>", opts)
+keymap.set("n", "<c-L>", ":BufferLineCycleNext<CR>", opts)
+keymap.set("n", "<c-H>", ":BufferLineCyclePrev<CR>", opts)
 
 -- ---- Visual Mode ----
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
