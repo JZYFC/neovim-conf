@@ -15,7 +15,7 @@ Plug 'nvim-tree/nvim-web-devicons' " Recommended (for coloured icons)
 Plug 'akinsho/bufferline.nvim', { 'tag': '*' }
 Plug 'nvim-tree/nvim-tree.lua'
 Plug 'windwp/nvim-autopairs'
-" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 " Plug 'abecodes/tabout.nvim'
 
 " List ends here. Plugins become visible to Vim after this call.
