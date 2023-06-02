@@ -12,7 +12,7 @@ keymap.set("n", "<space>f", ":NvimTreeToggle<CR>", opts)
 keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)
 keymap.set("n", "<leader>sh", ":split<CR>", opts)
 -- Bufferline
-keymap.set("n", "<space>bc", ":bd<CR>:NvimTreeToggle<CR>:NvimTreeToggle<CR>", opts)
+keymap.set("n", "<space>bc", ":bp<bar>sp<bar>bn<bar>bd<CR>", opts)
 keymap.set("n", "<c-L>", ":BufferLineCycleNext<CR>", opts)
 keymap.set("n", "<c-H>", ":BufferLineCyclePrev<CR>", opts)
 
