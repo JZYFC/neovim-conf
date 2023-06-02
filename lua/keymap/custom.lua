@@ -3,7 +3,8 @@ local keymap = vim.keymap
 
 local opts= { silent= true, nowait = true }
 -- ---- Insert Mode ----
-
+keymap.set("i", "<A-h>", "<Left>")
+keymap.set("i", "<A-l>", "<Right>")
 
 -- ---- Normal Mode ----
 -- Explorer
