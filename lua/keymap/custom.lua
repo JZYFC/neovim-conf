@@ -14,8 +14,8 @@ keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)
 keymap.set("n", "<leader>sh", ":split<CR>", opts)
 -- Bufferline
 keymap.set("n", "<space>bc", ":bp<bar>sp<bar>bn<bar>bd<CR>", opts)
-keymap.set("n", "<c-s-l>", ":BufferLineCycleNext<CR>", opts)
-keymap.set("n", "<c-s-h>", ":BufferLineCyclePrev<CR>", opts)
+keymap.set("n", "<c-a-l>", ":BufferLineCycleNext<CR>", opts)
+keymap.set("n", "<c-a-h>", ":BufferLineCyclePrev<CR>", opts)
 -- in case some terminal not supprt <c-s->
 keymap.set("n", "<space>bl", ":BufferLineCycleNext<CR>", opts)
 keymap.set("n", "<space>bh", ":BufferLineCyclePrev<CR>", opts)
