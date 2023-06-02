@@ -18,6 +18,9 @@ keymap.set("n", "<c-s-h>", ":BufferLineCyclePrev<CR>", opts)
 -- in case some terminal not supprt <c-s->
 keymap.set("n", "<space>bl", ":BufferLineCycleNext<CR>", opts)
 keymap.set("n", "<space>bh", ":BufferLineCyclePrev<CR>", opts)
+-- Window navigation
+keymap.set("n", "<c-l>", "<c-w>l")
+keymap.set("n", "<c-h>", "<c-w>h")
 
 -- ---- Visual Mode ----
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
