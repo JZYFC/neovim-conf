@@ -8,6 +8,7 @@ require("bufferline").setup {
                 separator = true
             }
         },
+        diagnostics = 'coc'
     }
 }
 
