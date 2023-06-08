@@ -23,11 +23,18 @@ end
 -- NOTE: Use command ':verbose imap <tab>' to make sure Tab is not mapped by
 -- other plugins before putting this into your config
 local opts = {silent = true, noremap = true, expr = true, replace_keycodes = false}
+local opts_no_replace_keycodes = {silent = true, noremap = true, expr = true}
 keyset("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()', opts)
 keyset("i", "<S-TAB>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<C-h>"]], opts)
 keyset("i", "<A-j>", [[coc#pum#visible() ? coc#pum#next(1) : "\<Down>"]], opts)
 keyset("i", "<A-k>", [[coc#pum#visible() ? coc#pum#prev(1) : "\<Up>"]], opts)
-keyset("i", "<Esc>", [[coc#pum#visible() ? coc#pum#close() : "\<Esc>"]], opts)
+keyset("i", "<Esc>", function ()
+    if vim.fn["coc#pum#visible"]() == 1 then
+        return "<c-r>=coc#pum#cancel()<CR>"
+    else
+        return "<Esc>"
+    end
+end, opts_no_replace_keycodes)
 
 -- Make <CR> to accept selected completion item or notify coc.nvim to format
 -- <C-g>u breaks current undo, please make your own choice
