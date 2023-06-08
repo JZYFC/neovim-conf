@@ -134,10 +134,12 @@ keyset("o", "ac", "<Plug>(coc-classobj-a)", opts)
 local opts = {silent = true, nowait = true, expr = true}
 keyset("n", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
 keyset("n", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
-keyset("i", "<C-f>",
-       'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(1)<cr>" : "<Right>"', opts)
-keyset("i", "<C-b>",
-       'coc#float#has_scroll() ? "<c-r>=coc#float#scroll(0)<cr>" : "<Left>"', opts)
+keyset("i", "<C-f>", function()
+    return vim.fn["coc#float#has_scroll"]() == 1 and "<c-r>=coc#float#scroll(1)<cr>" or "<Right>"
+end, opts)
+keyset("i", "<C-b>",function()
+    return vim.fn["coc#float#has_scroll"]() == 1 and "<c-r>=coc#float#scroll(0)<cr>" or "<Left>"
+end, opts)
 keyset("v", "<C-f>", 'coc#float#has_scroll() ? coc#float#scroll(1) : "<C-f>"', opts)
 keyset("v", "<C-b>", 'coc#float#has_scroll() ? coc#float#scroll(0) : "<C-b>"', opts)
 
