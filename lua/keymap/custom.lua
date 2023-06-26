@@ -22,6 +22,7 @@ keymap.set("n", "<space>bh", ":BufferLineCyclePrev<CR>", opts)
 -- Window navigation
 keymap.set("n", "<c-l>", "<c-w>l")
 keymap.set("n", "<c-h>", "<c-w>h")
+keymap.set("n", "<space>ns", ":nohlsearch<CR>", opts)
 
 -- ---- Visual Mode ----
 keymap.set("v", "J", ":m '>+1<CR>gv=gv")
