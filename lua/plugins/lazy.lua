@@ -31,5 +31,7 @@ local plugins = {
     "L3MON4D3/LuaSnip",
     "saadparwaiz1/cmp_luasnip",
     { "folke/trouble.nvim", dependencies = { "nvim-tree/nvim-web-devicons" } },
+    "lvimuser/lsp-inlayhints.nvim",
 }
+local opts = {}
 require("lazy").setup(plugins, opts)
