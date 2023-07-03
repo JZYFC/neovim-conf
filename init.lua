@@ -22,14 +22,17 @@ opt.termguicolors = true
 
 ---- Plugins ----
 -- Apply plugins
-vim.cmd 'source ~/.config/nvim/lua/plugins/config.vim'
+require("plugins.lazy")
 require("plugins.bufferline")
 require("plugins.nvim-tree")
 require("plugins.autopairs")
+require("plugins.lsp")
+require("plugins.cmp")
+require("plugins.trouble")
 
 ---- Keymaps ----
 -- Applu coc keymap
-require("keymap.coc")
+require("keymap.lsp")
 -- Apply custom keymap
 require("keymap.custom")
 

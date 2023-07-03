@@ -8,7 +8,7 @@ require("bufferline").setup {
                 separator = true
             }
         },
-        diagnostics = 'coc'
+        diagnostics = 'nvim_lsp'
     }
 }
 
