@@ -1,7 +1,8 @@
 local opt = vim.opt
 local keymap = vim.keymap
 
-local opts= { silent= true, nowait = true }
+local opts = { silent= true, nowait = true }
+local opts_expr = { silent = true, nowait = true, expr = true }
 -- ---- Insert Mode ----
 keymap.set("i", "<A-h>", "<Left>")
 keymap.set("i", "<A-l>", "<Right>")
@@ -12,6 +13,14 @@ keymap.set("n", "<space>f", ":NvimTreeToggle<CR>", opts)
 -- Window
 keymap.set("n", "<leader>sv", ":vsplit<CR>", opts)
 keymap.set("n", "<leader>sh", ":split<CR>", opts)
+keymap.set("n", "Q", function ()
+    if #vim.api.nvim_list_wins() ~= 1 then
+        return ":q<CR>"
+    else
+        return nil
+    end
+end,opts_expr)
+keymap.set("n", "<space>cq", ":ccl<CR>", opts)
 -- Bufferline
 keymap.set("n", "<space>bc", ":bp<bar>sp<bar>bn<bar>bd<bar>#<CR>", opts)
 keymap.set("n", "<c-a-l>", ":BufferLineCycleNext<CR>", opts)
