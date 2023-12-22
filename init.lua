@@ -15,6 +15,16 @@ opt.smartcase = true
 
 opt.termguicolors = true
 
+-- WSL clipboard support
+if vim.fn.has('wsl') then
+  vim.cmd [[
+  augroup Yank
+  autocmd!
+  autocmd TextYankPost * :call system('/mnt/c/windows/system32/clip.exe ',@")
+  augroup END
+  ]]
+end
+
 -- Set netrw to vertically expandtab to the right
 -- vim.g.netrw_altv = 1
 -- Set netrw to use tree view default
