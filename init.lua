@@ -39,7 +39,6 @@ require("plugins.autopairs")
 require("plugins.lsp")
 require("plugins.cmp")
 require("plugins.trouble")
-require("plugins.inlayhint")
 
 ---- Keymaps ----
 -- Applu coc keymap

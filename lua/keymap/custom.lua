@@ -20,7 +20,7 @@ keymap.set("n", "Q", function ()
         return nil
     end
 end,opts_expr)
-keymap.set("n", "<space>cq", ":ccl<CR>", opts)
+keymap.set("n", "<space>cq", ":ccl<CR>", opts) -- Close quick fix
 -- Bufferline
 keymap.set("n", "<space>bc", ":bp<bar>sp<bar>bn<bar>bd<bar>#<CR>", opts)
 keymap.set("n", "<c-a-l>", ":BufferLineCycleNext<CR>", opts)
