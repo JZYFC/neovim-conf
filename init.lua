@@ -45,6 +45,8 @@ require("plugins.trouble")
 require("keymap.lsp")
 -- Apply custom keymap
 require("keymap.custom")
+-- Apply custom scripts --
+require("scripts.inlay_hint")
 
 ---- Theme ----
 vim.cmd 'colorscheme catppuccin'
