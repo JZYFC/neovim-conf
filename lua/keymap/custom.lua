@@ -17,9 +17,11 @@ keymap.set("n", "Q", function ()
     if #vim.api.nvim_list_wins() ~= 1 then
         return ":q<CR>"
     else
+        print("Use :q to quit the last window")
         return nil
     end
 end,opts_expr)
+keymap.set("n", "QQ", ":q<CR>", opts)
 keymap.set("n", "<space>cq", ":ccl<CR>", opts) -- Close quick fix
 -- Bufferline
 keymap.set("n", "<space>bc", ":bp<bar>sp<bar>bn<bar>bd<bar>#<CR>", opts)
