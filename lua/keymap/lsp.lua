@@ -13,7 +13,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
         -- Enable inlay hint
         local client = vim.lsp.get_client_by_id(ev.data.client_id)
         if client.server_capabilities.inlayHintProvider then
-            vim.lsp.inlay_hint.enable(ev.buf, true)
+            vim.lsp.inlay_hint.enable(true, { bufnr = 0 }) -- true: enable inlay_hint; 0: only for current buffer
         end
 
         -- Enable completion triggered by <c-x><c-o>
