@@ -25,6 +25,12 @@ if vim.fn.has('wsl') then
   ]]
 end
 
+-- Windows-specific settings
+if vim.fn.has("win64") == 1 or vim.fn.has("win32") == 1 or vim.fn.has("win16") then
+    vim.g.terminal_emulator = 'pwsh'
+    vim.opt.shell = 'pwsh'
+end
+
 -- Set netrw to vertically expandtab to the right
 -- vim.g.netrw_altv = 1
 -- Set netrw to use tree view default
