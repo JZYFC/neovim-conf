@@ -26,12 +26,12 @@ require("mason-lspconfig").setup({
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
-lspconfig.clangd.setup {
-    capabilities = capabilities
-}
-lspconfig.lua_ls.setup {
-    capabilities = capabilities,
-}
-lspconfig.rust_analyzer.setup {
-    capabilities = capabilities,
-}
+-- C/C++
+vim.lsp.enable('clangd')
+-- Lua
+vim.lsp.enable('lua_ls')
+-- Rust
+vim.lsp.enable('rust_analyzer')
+-- Zig
+vim.lsp.enable('zls')
+
